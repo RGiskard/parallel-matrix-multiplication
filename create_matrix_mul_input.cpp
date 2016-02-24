@@ -7,8 +7,8 @@ using namespace std;
 
 enum cons {MAX_VALUE = 1000};
 
-int a[3000][3000];
-int b[3000][3000];
+int a[1005][1005];
+int b[1005][1005];
 
 int main()
 {
@@ -44,7 +44,9 @@ int main()
 		x = rand() % n;
 		y = rand() % m;
 		val = rand() % MAX_VALUE;
-		f << x << " " << y << " " << val << endl;
+		if(!a[x][y])
+			f << x << " " << y << " " << val << endl;
+		a[x][y] = 1;
 
 	}
 
@@ -52,7 +54,10 @@ int main()
 		x = rand() % n;
 		y = rand() % m;
 		val = rand() % MAX_VALUE;
-		f << x << " " << y << " " << val << endl;
+		if(!b[x][y])
+			f << x << " " << y << " " << val << endl;
+		b[x][y] = 1;
+
 	}
 
 	
