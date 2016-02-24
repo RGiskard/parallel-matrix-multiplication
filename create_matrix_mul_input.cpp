@@ -41,12 +41,12 @@ int main()
 	f << k1 << " " << k2 << endl << endl;;
 
 	for (int i = 0; i < k1; i++) {
-		x = rand() % MAX_VALUE;
-		y = rand() % MAX_VALUE;
+		x = rand() % n;
+		y = rand() %  m;
 		val = rand() % MAX_VALUE;
 		while(a[x][y]) {
-			x = rand() % MAX_VALUE;
-			y = rand() % MAX_VALUE;
+			x = rand() % n;
+			y = rand() % m;
 			val = rand() % MAX_VALUE;			
 		}
 		f << x << " " << y << " " << val << endl;
@@ -55,12 +55,12 @@ int main()
 	}
 
 	for (int i = 0; i <  k2 ; i++) {
-		x = rand() % MAX_VALUE;
-		y = rand() % MAX_VALUE;
+		x = rand() % m;
+		y = rand() % p;
 		val = rand() % MAX_VALUE;
 		while(b[x][y]) {
-			x = rand() % MAX_VALUE;
-			y = rand() % MAX_VALUE;
+			x = rand() % m;
+			y = rand() % p;
 			val = rand() % MAX_VALUE;			
 		}
 		b[x][y] = 1;
