@@ -20,49 +20,40 @@ int main()
 	int y;
 	int val;
 
+	int k1;
+	int k2;
+
+
 	srand (time(NULL));
 	fstream f;
 	f.open("input.in", ios::out);
+	cout << "Enter N, M and P" << endl;
 
 	cin >> n;
 	cin >> m;
 	cin >> p;
+	f << n << " " << m << " " << p << endl;
+	f << endl;
 	
-	f << n << " " << m << endl;
-	f << m << " " << p << endl;
-	f << endl;
+	k1 = (n + m) / 2;
+	k2 = (m + p) / 2;
 
-	for (int i = 0; i < (n + m) / 2; i++) {
+	f << k1 << " " << k2 << endl << endl;;
+
+	for (int i = 0; i < k1; i++) {
 		x = rand() % n;
 		y = rand() % m;
 		val = rand() % MAX_VALUE;
-		a[x][y] = val;
+		f << x << " " << y << " " << val << endl;
+
 	}
 
-	for (int i = 0; i < (m + p) / 2 ; i++) {
+	for (int i = 0; i <  k2 ; i++) {
 		x = rand() % n;
 		y = rand() % m;
 		val = rand() % MAX_VALUE;
-		b[x][y] = val;
+		f << x << " " << y << " " << val << endl;
 	}
-
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < m; j++) {
-			f << a[i][j] << " "; 
-		}
-		f << endl;
-	}
-
-	f << endl;
-
-	for (int i = 0; i < m; i++) {
-		for (int j = 0; j < p; j++) {
-			f << b[i][j] << " "; 
-		}
-		f << endl;
-	}
-
-
 
 	
 }

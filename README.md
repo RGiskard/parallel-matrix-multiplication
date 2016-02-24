@@ -19,10 +19,4 @@ p
 
 where n, m, p are the dimensions of the matrixes. The program creates an input file called `input.in` of the format
 
-n m
 
-m p
-
-matrix A
-
-matrix B
